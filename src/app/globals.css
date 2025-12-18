@@ -234,3 +234,56 @@ html {
   background-color: var(--accent);
   color: white;
 }
+
+/* Form input styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(240, 45, 58, 0.1);
+}
+
+/* Mobile animation optimizations */
+@media (max-width: 768px) {
+  /* Reduce blur effects on mobile for better performance */
+  /* Note: These will work with inline styles or data attributes, 
+     but Tailwind classes need to be conditionally applied in components */
+  
+  /* Reduce animation complexity on mobile */
+  [data-framer-component] {
+    --framer-motion-duration: 0.3s;
+  }
+  
+  /* Disable hover effects that don't work well on mobile */
+  .card:hover,
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    transform: none;
+  }
+  
+  /* Optimize backdrop blur on mobile */
+  [class*="backdrop-blur"] {
+    backdrop-filter: blur(8px) !important;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

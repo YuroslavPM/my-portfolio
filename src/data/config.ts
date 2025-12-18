@@ -16,5 +16,5 @@ export const siteConfig = {
     location: "Plovdiv",
     availability: "Open to product engineering roles and select freelance collaborations.",
     email: "yuroslavpm11@gmail.com",
-    resumeUrl: "/resume.pdf",
+    resumeUrl: "/CV_Yuroslav_Minchev.pdf",
 };

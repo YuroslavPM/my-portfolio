@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
-import { ProjectCard } from "@/components/ui/ProjectCard";
+import { ProjectCard } from "@/components/cards/ProjectCard";
 
 export function Projects() {
     return (
