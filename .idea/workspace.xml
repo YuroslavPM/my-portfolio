@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f115de46-c972-4d82-9b87-70e5d4befc57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/contact/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cards/ContactForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useIsMobile.ts" afterDir="false" />
+    <list default="true" id="f115de46-c972-4d82-9b87-70e5d4befc57" name="Changes" comment="Polish for mobile and ContactForm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/Contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/Contact.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/Projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/ProjectCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/ProjectCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,11 +84,24 @@
       <option name="presentableId" value="Default" />
       <updated>1745564868128</updated>
       <workItem from="1745564869180" duration="27000" />
-      <workItem from="1766060252661" duration="2595000" />
+      <workItem from="1766060252661" duration="5475000" />
     </task>
+    <task id="LOCAL-00001" summary="Polish for mobile and ContactForm">
+      <option name="closed" value="true" />
+      <created>1766063206894</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1766063206894</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Polish for mobile and ContactForm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Polish for mobile and ContactForm" />
   </component>
 </project>

@@ -36,3 +36,4 @@ export async function POST(req: Request) {
         return NextResponse.json({ error: "Email not sent" }, { status: 500 });
     }
 }
+
