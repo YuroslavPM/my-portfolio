@@ -1,0 +1,236 @@
+@import "tailwindcss";
+
+:root {
+  /* 🚀 Deep Space Scarlet palette */
+  --background: #eff6ee;         /* mint cream base */
+  --background-accent: #9197ae;  /* lavender grey haze */
+  --surface: #ffffff;            /* crisp card */
+  --surface-elevated: #f6f8fb;   /* airy elevated */
+  --muted: #54607a;              /* cooled neutral */
+  --text: #273043;               /* deep space blue */
+  --text-secondary: #5e6782;     /* softer blue-grey */
+  --accent: #f02d3a;             /* strawberry red */
+  --accent-hover: #dd0426;       /* primary scarlet */
+  --border: #d6dbe5;             /* light neutral border */
+  --border-light: #b9c0cf;       /* stronger border */
+  --shadow-soft: 0 12px 30px rgba(39, 48, 67, 0.08);
+  --shadow-hover: 0 16px 40px rgba(39, 48, 67, 0.12);
+  color-scheme: light;
+}
+
+/* 🎨 CREATIVE COLOR PALETTES - Uncomment to try! */
+
+/* 🔮 Electric Dreams - Deep Purple/Magenta - Vibrant & Futuristic
+:root {
+  --background: #0d0221;
+  --surface: #190d33;
+  --surface-elevated: #251845;
+  --muted: #a57fc1;
+  --text: #f2e9ff;
+  --text-secondary: #d4c4e8;
+  --accent: #ff006e;
+  --accent-hover: #d6005c;
+  --border: #2d1b4e;
+  --border-light: #3f2866;
+  color-scheme: dark;
+}
+*/
+
+/* 🌅 Sunset Horizon - Deep Orange/Red - Warm & Energetic
+:root {
+  --background: #1a0f0a;
+  --surface: #2b1810;
+  --surface-elevated: #3d2318;
+  --muted: #c89176;
+  --text: #fff4ed;
+  --text-secondary: #f5d7c4;
+  --accent: #ff6b35;
+  --accent-hover: #ff5216;
+  --border: #4a2f20;
+  --border-light: #5f3d2d;
+  color-scheme: dark;
+}
+*/
+
+/* 🌌 Cosmic Indigo - Deep Indigo/Blue - Mystical & Elegant
+:root {
+  --background: #0a0e27;
+  --surface: #141938;
+  --surface-elevated: #1e2749;
+  --muted: #7c88c1;
+  --text: #eef2ff;
+  --text-secondary: #c7d2fe;
+  --accent: #818cf8;
+  --accent-hover: #6366f1;
+  --border: #2a3256;
+  --border-light: #3b4468;
+  color-scheme: dark;
+}
+*/
+
+/* 🎭 Neon Noir - Deep Navy/Cyan - Cyberpunk & Edgy
+:root {
+  --background: #030b1a;
+  --surface: #0c1729;
+  --surface-elevated: #162438;
+  --muted: #5b7a99;
+  --text: #e3f2fd;
+  --text-secondary: #b3d9ff;
+  --accent: #0ff;
+  --accent-hover: #00d4e6;
+  --border: #1f3447;
+  --border-light: #2d4a5f;
+  color-scheme: dark;
+}
+*/
+
+/* 🍇 Royal Amethyst - Rich Purple - Luxurious & Sophisticated
+:root {
+  --background: #150a1e;
+  --surface: #221533;
+  --surface-elevated: #2f2047;
+  --muted: #b394c7;
+  --text: #f5edff;
+  --text-secondary: #dcc8f0;
+  --accent: #c77dff;
+  --accent-hover: #b25bff;
+  --border: #3a2851;
+  --border-light: #4d3868;
+  color-scheme: dark;
+}
+*/
+
+/* 🌿 Matrix Green - Deep Emerald - Tech & Fresh
+:root {
+  --background: #041208;
+  --surface: #0a1f14;
+  --surface-elevated: #0f2d1f;
+  --muted: #5ea37a;
+  --text: #e8fff3;
+  --text-secondary: #b8f5d6;
+  --accent: #00ff7f;
+  --accent-hover: #00e670;
+  --border: #163829;
+  --border-light: #1f4a36;
+  color-scheme: dark;
+}
+*/
+
+/* 🌺 Tropical Night - Deep Magenta/Pink - Bold & Playful
+:root {
+  --background: #1a0515;
+  --surface: #2a0f24;
+  --surface-elevated: #3c1633;
+  --muted: #c77a9f;
+  --text: #ffebf7;
+  --text-secondary: #ffc8e8;
+  --accent: #ff4d9d;
+  --accent-hover: #ff2684;
+  --border: #4a1f3e;
+  --border-light: #5f2d51;
+  color-scheme: dark;
+}
+*/
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--text);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background:
+    radial-gradient(circle at 20% 25%, rgba(145, 151, 174, 0.55) 0, transparent 38%),
+    radial-gradient(circle at 78% 35%, rgba(39, 48, 67, 0.32) 0, transparent 36%),
+    linear-gradient(120deg, #ffffff 0%, #eff6ee 48%, #f4f6fb 100%);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: -0.011em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Card component */
+.card {
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(120deg, var(--accent) 0%, var(--accent-hover) 100%);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 10px 25px rgba(39, 48, 67, 0.14);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(120deg, var(--accent-hover) 0%, var(--accent) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 35px rgba(39, 48, 67, 0.2);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--text);
+  border: 1px solid rgba(145, 151, 174, 0.45);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 8px 18px rgba(39, 48, 67, 0.08);
+}
+
+.btn-secondary:hover {
+  border-color: rgba(145, 151, 174, 0.65);
+  background: rgba(255, 255, 255, 0.76);
+  transform: translateY(-1px);
+}
+
+/* Section styling */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--accent);
+  color: white;
+}
