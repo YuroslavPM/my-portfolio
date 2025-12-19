@@ -19,12 +19,12 @@ export const projects: Project[] = [
     },
     {
         id:"3",
-        title: "Dushevnamozaika",
+        title: "Душевна мозайка",
         description: "An ASP.NET Core MVC web application featuring appointment booking, article management, newsletter subscriptions, and role-based admin controls. Built with Entity Framework Core, MySQL, ASP.NET Identity and Tailwind CSS.",
         technologies: ["C#", ".NET 8", "Tailwind"],
         link: "https://www.dushevnamozaika.com",
         github: "https://github.com/YuroslavPM/PA-Website",
-        image: "/images/project-10.png",
+        image: "/images/project-3.png",
     },
     {
         id:"4",
