@@ -1,30 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap");
 @import "tailwindcss";
 
-/* ─── Cosmic Indigo Dark Theme ──────────────────────────────────────── */
+/* ─── Slate + Indigo Light Theme ────────────────────────────────────── */
 :root {
-  --background: #080c1f;
-  --background-2: #0d1230;
-  --surface: #111530;
-  --surface-elevated: #1a2040;
-  --surface-glass: rgba(17, 21, 48, 0.7);
-  --muted: #6b7db3;
-  --text: #eef2ff;
-  --text-secondary: #a8b4d8;
-  --accent: #818cf8;
-  --accent-hover: #6366f1;
-  --accent-glow: rgba(129, 140, 248, 0.25);
-  --accent-glow-strong: rgba(129, 140, 248, 0.45);
-  --border: #1e2755;
-  --border-light: #2d3a6e;
-  --border-accent: rgba(129, 140, 248, 0.3);
-  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.4);
-  --shadow-hover: 0 8px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(129, 140, 248, 0.15);
-  --shadow-glow: 0 0 40px rgba(129, 140, 248, 0.2);
-  --green-status: #34d399;
-  --work-accent: #a78bfa;
-  --work-glow: rgba(167, 139, 250, 0.2);
-  color-scheme: dark;
+  --background: #F8FAFF;
+  --background-2: #F1F5FB;
+  --surface: #FFFFFF;
+  --surface-elevated: #F1F5F9;
+  --surface-glass: rgba(255, 255, 255, 0.75);
+  --muted: #8896B0;
+  --text: #0F172A;
+  --text-secondary: #475569;
+  --accent: #6366F1;
+  --accent-hover: #4F46E5;
+  --accent-glow: rgba(99, 102, 241, 0.15);
+  --accent-glow-strong: rgba(99, 102, 241, 0.30);
+  --border: #E2E8F0;
+  --border-light: #CBD5E1;
+  --border-accent: rgba(99, 102, 241, 0.22);
+  --shadow-soft: 0 1px 3px rgba(15, 23, 42, 0.06), 0 4px 16px rgba(15, 23, 42, 0.05);
+  --shadow-hover: 0 4px 20px rgba(15, 23, 42, 0.10), 0 0 0 1px rgba(99, 102, 241, 0.12);
+  --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.12);
+  --green-status: #059669;
+  --work-accent: #7C3AED;
+  --work-glow: rgba(124, 58, 237, 0.15);
+  color-scheme: light;
 }
 
 @theme inline {
@@ -49,9 +49,8 @@ html {
 body {
   background-color: var(--background);
   background-image:
-    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(99, 102, 241, 0.15) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 80% 90%, rgba(129, 140, 248, 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse 40% 30% at 50% 50%, rgba(167, 139, 250, 0.04) 0%, transparent 70%);
+    radial-gradient(ellipse 70% 45% at 0% 0%, rgba(99, 102, 241, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 100% 85%, rgba(124, 58, 237, 0.05) 0%, transparent 50%);
   color: var(--text);
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   letter-spacing: -0.011em;
@@ -124,7 +123,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 100%);
   opacity: 0;
   transition: opacity 0.2s ease;
 }
@@ -170,20 +169,20 @@ a {
   font-weight: 600;
   letter-spacing: 0.02em;
   border: 1px solid var(--border-accent);
-  background: rgba(129, 140, 248, 0.08);
+  background: rgba(99, 102, 241, 0.07);
   color: var(--accent);
 }
 
 .badge-work {
-  border-color: rgba(167, 139, 250, 0.3);
-  background: rgba(167, 139, 250, 0.08);
+  border-color: rgba(124, 58, 237, 0.25);
+  background: rgba(124, 58, 237, 0.07);
   color: var(--work-accent);
 }
 
 .badge-private {
-  border-color: rgba(251, 191, 36, 0.3);
+  border-color: rgba(180, 130, 0, 0.3);
   background: rgba(251, 191, 36, 0.08);
-  color: #fbbf24;
+  color: #92680a;
 }
 
 /* ─── Status dot ─────────────────────────────────────────────────────── */
@@ -197,8 +196,17 @@ a {
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; box-shadow: 0 0 6px var(--green-status); }
-  50% { opacity: 0.7; box-shadow: 0 0 14px var(--green-status); }
+
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 6px var(--green-status);
+  }
+
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 14px var(--green-status);
+  }
 }
 
 /* ─── Glow orb decorations ───────────────────────────────────────────── */
@@ -212,23 +220,49 @@ a {
 
 /* ─── Fade-in animations (CSS-native, no JS lib needed for basics) ───── */
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slide-right {
-  from { opacity: 0; transform: translateX(-16px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes scale-in {
-  from { opacity: 0; transform: scale(0.92); }
-  to   { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .animate-fade-up {
@@ -244,19 +278,49 @@ a {
 }
 
 /* Delay utilities */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; }
-.delay-600 { animation-delay: 0.6s; }
-.delay-700 { animation-delay: 0.7s; }
-.delay-800 { animation-delay: 0.8s; }
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-600 {
+  animation-delay: 0.6s;
+}
+
+.delay-700 {
+  animation-delay: 0.7s;
+}
+
+.delay-800 {
+  animation-delay: 0.8s;
+}
 
 /* ─── Typing cursor ──────────────────────────────────────────────────── */
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 .typing-cursor::after {
@@ -310,12 +374,36 @@ a {
   line-height: 1.8;
 }
 
-.terminal-comment { color: #4b5680; }
-.terminal-keyword { color: #818cf8; }
-.terminal-string  { color: #a5d6ff; }
-.terminal-value   { color: #7dd3fc; }
-.terminal-fn      { color: #c3b9fb; }
-.terminal-prop    { color: #94a3b8; }
+/* Terminal keeps a dark interior — VS Code dark theme inside a light page */
+.terminal-block {
+  background: #1e2030;
+  color: #cdd6f4;
+  border-radius: 0 0 16px 16px;
+}
+
+.terminal-comment {
+  color: #6c7086;
+}
+
+.terminal-keyword {
+  color: #89b4fa;
+}
+
+.terminal-string {
+  color: #a6e3a1;
+}
+
+.terminal-value {
+  color: #89dceb;
+}
+
+.terminal-fn {
+  color: #cba6f7;
+}
+
+.terminal-prop {
+  color: #cdd6f4;
+}
 
 /* ─── Form input styles ──────────────────────────────────────────────── */
 input[type="text"],
@@ -349,6 +437,7 @@ textarea:focus {
 
 /* ─── Mobile Overrides ───────────────────────────────────────────────── */
 @media (max-width: 768px) {
+
   /* Disable hover transforms — they trigger on tap and feel sticky */
   .card:hover,
   .btn-primary:hover,
@@ -370,6 +459,7 @@ textarea:focus {
 
 /* ─── Reduced motion ─────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -378,6 +468,7 @@ textarea:focus {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+
   .status-dot {
     animation: none;
   }
