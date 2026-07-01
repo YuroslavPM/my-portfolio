@@ -1,158 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap");
 @import "tailwindcss";
 
+/* ─── Cosmic Indigo Dark Theme ──────────────────────────────────────── */
 :root {
-  /* 🚀 Deep Space Scarlet palette */
-  --background: #eff6ee;         /* mint cream base */
-  --background-accent: #9197ae;  /* lavender grey haze */
-  --surface: #ffffff;            /* crisp card */
-  --surface-elevated: #f6f8fb;   /* airy elevated */
-  --muted: #54607a;              /* cooled neutral */
-  --text: #273043;               /* deep space blue */
-  --text-secondary: #5e6782;     /* softer blue-grey */
-  --accent: #f02d3a;             /* strawberry red */
-  --accent-hover: #dd0426;       /* primary scarlet */
-  --border: #d6dbe5;             /* light neutral border */
-  --border-light: #b9c0cf;       /* stronger border */
-  --shadow-soft: 0 12px 30px rgba(39, 48, 67, 0.08);
-  --shadow-hover: 0 16px 40px rgba(39, 48, 67, 0.12);
-  color-scheme: light;
-}
-
-/* 🎨 CREATIVE COLOR PALETTES - Uncomment to try! */
-
-/* 🔮 Electric Dreams - Deep Purple/Magenta - Vibrant & Futuristic
-:root {
-  --background: #0d0221;
-  --surface: #190d33;
-  --surface-elevated: #251845;
-  --muted: #a57fc1;
-  --text: #f2e9ff;
-  --text-secondary: #d4c4e8;
-  --accent: #ff006e;
-  --accent-hover: #d6005c;
-  --border: #2d1b4e;
-  --border-light: #3f2866;
-  color-scheme: dark;
-}
-*/
-
-/* 🌅 Sunset Horizon - Deep Orange/Red - Warm & Energetic
-:root {
-  --background: #1a0f0a;
-  --surface: #2b1810;
-  --surface-elevated: #3d2318;
-  --muted: #c89176;
-  --text: #fff4ed;
-  --text-secondary: #f5d7c4;
-  --accent: #ff6b35;
-  --accent-hover: #ff5216;
-  --border: #4a2f20;
-  --border-light: #5f3d2d;
-  color-scheme: dark;
-}
-*/
-
-/* 🌌 Cosmic Indigo - Deep Indigo/Blue - Mystical & Elegant
-:root {
-  --background: #0a0e27;
-  --surface: #141938;
-  --surface-elevated: #1e2749;
-  --muted: #7c88c1;
+  --background: #080c1f;
+  --background-2: #0d1230;
+  --surface: #111530;
+  --surface-elevated: #1a2040;
+  --surface-glass: rgba(17, 21, 48, 0.7);
+  --muted: #6b7db3;
   --text: #eef2ff;
-  --text-secondary: #c7d2fe;
+  --text-secondary: #a8b4d8;
   --accent: #818cf8;
   --accent-hover: #6366f1;
-  --border: #2a3256;
-  --border-light: #3b4468;
+  --accent-glow: rgba(129, 140, 248, 0.25);
+  --accent-glow-strong: rgba(129, 140, 248, 0.45);
+  --border: #1e2755;
+  --border-light: #2d3a6e;
+  --border-accent: rgba(129, 140, 248, 0.3);
+  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 8px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(129, 140, 248, 0.15);
+  --shadow-glow: 0 0 40px rgba(129, 140, 248, 0.2);
+  --green-status: #34d399;
+  --work-accent: #a78bfa;
+  --work-glow: rgba(167, 139, 250, 0.2);
   color-scheme: dark;
 }
-*/
-
-/* 🎭 Neon Noir - Deep Navy/Cyan - Cyberpunk & Edgy
-:root {
-  --background: #030b1a;
-  --surface: #0c1729;
-  --surface-elevated: #162438;
-  --muted: #5b7a99;
-  --text: #e3f2fd;
-  --text-secondary: #b3d9ff;
-  --accent: #0ff;
-  --accent-hover: #00d4e6;
-  --border: #1f3447;
-  --border-light: #2d4a5f;
-  color-scheme: dark;
-}
-*/
-
-/* 🍇 Royal Amethyst - Rich Purple - Luxurious & Sophisticated
-:root {
-  --background: #150a1e;
-  --surface: #221533;
-  --surface-elevated: #2f2047;
-  --muted: #b394c7;
-  --text: #f5edff;
-  --text-secondary: #dcc8f0;
-  --accent: #c77dff;
-  --accent-hover: #b25bff;
-  --border: #3a2851;
-  --border-light: #4d3868;
-  color-scheme: dark;
-}
-*/
-
-/* 🌿 Matrix Green - Deep Emerald - Tech & Fresh
-:root {
-  --background: #041208;
-  --surface: #0a1f14;
-  --surface-elevated: #0f2d1f;
-  --muted: #5ea37a;
-  --text: #e8fff3;
-  --text-secondary: #b8f5d6;
-  --accent: #00ff7f;
-  --accent-hover: #00e670;
-  --border: #163829;
-  --border-light: #1f4a36;
-  color-scheme: dark;
-}
-*/
-
-/* 🌺 Tropical Night - Deep Magenta/Pink - Bold & Playful
-:root {
-  --background: #1a0515;
-  --surface: #2a0f24;
-  --surface-elevated: #3c1633;
-  --muted: #c77a9f;
-  --text: #ffebf7;
-  --text-secondary: #ffc8e8;
-  --accent: #ff4d9d;
-  --accent-hover: #ff2684;
-  --border: #4a1f3e;
-  --border-light: #5f2d51;
-  color-scheme: dark;
-}
-*/
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--text);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 }
 
-* {
+/* ─── Reset ─────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
+/* ─── Base ───────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background:
-    radial-gradient(circle at 20% 25%, rgba(145, 151, 174, 0.55) 0, transparent 38%),
-    radial-gradient(circle at 78% 35%, rgba(39, 48, 67, 0.32) 0, transparent 36%),
-    linear-gradient(120deg, #ffffff 0%, #eff6ee 48%, #f4f6fb 100%);
+  background-color: var(--background);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(99, 102, 241, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 90%, rgba(129, 140, 248, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 30% at 50% 50%, rgba(167, 139, 250, 0.04) 0%, transparent 70%);
   color: var(--text);
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   letter-spacing: -0.011em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 a {
@@ -160,82 +65,259 @@ a {
   text-decoration: none;
 }
 
-/* Card component */
-.card {
-  border: 1px solid var(--border);
-  background-color: var(--surface);
-  border-radius: 12px;
-  box-shadow: var(--shadow-soft);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.card:hover {
-  border-color: var(--border-light);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-hover);
-}
-
-/* Button styles */
-.btn-primary {
-  background: linear-gradient(120deg, var(--accent) 0%, var(--accent-hover) 100%);
-  color: #ffffff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 0.875rem;
-  transition: all 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  box-shadow: 0 10px 25px rgba(39, 48, 67, 0.14);
-}
-
-.btn-primary:hover {
-  background: linear-gradient(120deg, var(--accent-hover) 0%, var(--accent) 100%);
-  transform: translateY(-1px);
-  box-shadow: 0 14px 35px rgba(39, 48, 67, 0.2);
-}
-
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.6);
-  color: var(--text);
-  border: 1px solid rgba(145, 151, 174, 0.45);
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 0.875rem;
-  transition: all 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  box-shadow: 0 8px 18px rgba(39, 48, 67, 0.08);
-}
-
-.btn-secondary:hover {
-  border-color: rgba(145, 151, 174, 0.65);
-  background: rgba(255, 255, 255, 0.76);
-  transform: translateY(-1px);
-}
-
-/* Section styling */
-.section-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Selection color */
+/* ─── Selection ──────────────────────────────────────────────────────── */
 ::selection {
   background-color: var(--accent);
   color: white;
 }
 
-/* Form input styles */
+/* ─── Layout ─────────────────────────────────────────────────────────── */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ─── Card Component ─────────────────────────────────────────────────── */
+.card {
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+/* ─── Glass Card ─────────────────────────────────────────────────────── */
+.glass-card {
+  background: var(--surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+}
+
+/* ─── Button Styles ──────────────────────────────────────────────────── */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 20px var(--accent-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px var(--accent-glow-strong);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  background: var(--surface-elevated);
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px var(--border-accent), var(--shadow-soft);
+}
+
+/* ─── Badge ──────────────────────────────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--border-accent);
+  background: rgba(129, 140, 248, 0.08);
+  color: var(--accent);
+}
+
+.badge-work {
+  border-color: rgba(167, 139, 250, 0.3);
+  background: rgba(167, 139, 250, 0.08);
+  color: var(--work-accent);
+}
+
+.badge-private {
+  border-color: rgba(251, 191, 36, 0.3);
+  background: rgba(251, 191, 36, 0.08);
+  color: #fbbf24;
+}
+
+/* ─── Status dot ─────────────────────────────────────────────────────── */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green-status);
+  box-shadow: 0 0 8px var(--green-status);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px var(--green-status); }
+  50% { opacity: 0.7; box-shadow: 0 0 14px var(--green-status); }
+}
+
+/* ─── Glow orb decorations ───────────────────────────────────────────── */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* ─── Fade-in animations (CSS-native, no JS lib needed for basics) ───── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slide-right {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease both;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Delay utilities */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+
+/* ─── Typing cursor ──────────────────────────────────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typing-cursor::after {
+  content: "|";
+  color: var(--accent);
+  animation: blink 1.2s step-end infinite;
+  margin-left: 2px;
+}
+
+/* ─── Timeline ───────────────────────────────────────────────────────── */
+.timeline-line {
+  position: absolute;
+  left: 19px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), var(--work-accent), transparent);
+  opacity: 0.4;
+}
+
+/* ─── Filter Tab ─────────────────────────────────────────────────────── */
+.filter-tab {
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-tab:hover {
+  border-color: var(--border-light);
+  color: var(--text);
+  background: var(--surface);
+}
+
+.filter-tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+
+/* ─── Code block (for hero terminal) ────────────────────────────────── */
+.terminal-block {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+.terminal-comment { color: #4b5680; }
+.terminal-keyword { color: #818cf8; }
+.terminal-string  { color: #a5d6ff; }
+.terminal-value   { color: #7dd3fc; }
+.terminal-fn      { color: #c3b9fb; }
+.terminal-prop    { color: #94a3b8; }
+
+/* ─── Form input styles ──────────────────────────────────────────────── */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -243,40 +325,50 @@ textarea {
   font-family: inherit;
   font-size: 0.875rem;
   line-height: 1.5;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+  color: var(--muted);
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
 textarea:focus {
-  box-shadow: 0 0 0 3px rgba(240, 45, 58, 0.1);
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
 }
 
-/* Mobile animation optimizations */
+/* ─── Mobile Overrides ───────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  /* Reduce blur effects on mobile for better performance */
-  /* Note: These will work with inline styles or data attributes, 
-     but Tailwind classes need to be conditionally applied in components */
-  
-  /* Reduce animation complexity on mobile */
-  [data-framer-component] {
-    --framer-motion-duration: 0.3s;
-  }
-  
-  /* Disable hover effects that don't work well on mobile */
+  /* Disable hover transforms — they trigger on tap and feel sticky */
   .card:hover,
   .btn-primary:hover,
   .btn-secondary:hover {
     transform: none;
   }
-  
-  /* Optimize backdrop blur on mobile */
-  [class*="backdrop-blur"] {
-    backdrop-filter: blur(8px) !important;
+
+  /* Reduce blur complexity on low-power mobile GPUs */
+  .glass-card {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* Keep glow orbs cheap on mobile */
+  .glow-orb {
+    filter: blur(40px);
   }
 }
 
-/* Reduce motion for users who prefer it */
+/* ─── Reduced motion ─────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -285,5 +377,8 @@ textarea:focus {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+  .status-dot {
+    animation: none;
   }
 }
