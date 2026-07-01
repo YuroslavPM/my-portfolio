@@ -3,9 +3,11 @@ export interface Project {
     title: string;
     description: string;
     technologies: string[];
-    link: string;
+    link?: string;
     github?: string;
     image?: string;
+    type: "personal" | "work";
+    isPrivate?: boolean;
 }
 
 export interface NavItem {
