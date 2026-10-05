@@ -4,12 +4,33 @@ import { useRef, useEffect } from "react";
 import { animate, inView } from "motion";
 import { Code2, Palette, Zap, Users, Building2, Calendar } from "lucide-react";
 
+function formatTenure(start: Date, end: Date = new Date()): string {
+    let years = end.getFullYear() - start.getFullYear();
+    let months = end.getMonth() - start.getMonth();
+    let days = end.getDate() - start.getDate();
+
+    if (days < 0) {
+        months -= 1;
+        days += new Date(end.getFullYear(), end.getMonth(), 0).getDate();
+    }
+    if (months < 0) {
+        years -= 1;
+        months += 12;
+    }
+
+    const parts: string[] = [];
+    if (years > 0) parts.push(`${years} ${years === 1 ? "year" : "years"}`);
+    if (months > 0) parts.push(`${months} ${months === 1 ? "month" : "months"}`);
+    if (days > 0 || parts.length === 0) parts.push(`${days} ${days === 1 ? "day" : "days"}`);
+    return parts.join(", ");
+}
+
 const experience = [
     {
         company: "Current Company",
         role: "Junior Full-Stack Developer",
-        period: "Jan 2025 – Present",
-        duration: "6 months",
+        period: "Jan 2026 – Present",
+        duration: formatTenure(new Date(2026, 0, 21)),
         current: true,
         highlights: [
             "Private school management platform — parent & admin portals, eVrotrus digital signatures, candidature workflows",
@@ -21,8 +42,8 @@ const experience = [
     {
         company: "Previous Company",
         role: "Junior Full-Stack Developer",
-        period: "Jun 2024 – Dec 2024",
-        duration: "6 months",
+        period: "Jun 2025 – Dec 2025",
+        duration: formatTenure(new Date(2025, 5, 1), new Date(2025, 11, 31)),
         current: false,
         highlights: [
             "Built full-stack web apps with Laravel + SolidJS + Tailwind",
